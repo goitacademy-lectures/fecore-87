@@ -1,4 +1,4 @@
-# FECore80
+# FECore-87
 
 Заняття 1:
 
@@ -16,4 +16,5 @@
 
 ---
 
-💈 🪒 [Посилання на макет](https://www.figma.com/file/z6Rb84e4NKxe66QNokOWA8/Barbershop-EN?node-id=1374%3A32)
+💈 🪒
+[Посилання на макет](https://www.figma.com/file/z6Rb84e4NKxe66QNokOWA8/Barbershop-EN?node-id=1374%3A32)
