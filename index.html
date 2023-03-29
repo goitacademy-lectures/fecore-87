@@ -11,58 +11,81 @@
     <title>BarberShop</title>
     <!-- Fav icons -->
     <link rel="icon" type="image/svg" sizes="32x32" href="./images/favicon/favicon.svg" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header section -->
-    <header>
-      <a href="">
-        <img src="./images/header/logo.svg" alt="BarberShop logo" width="76" height="76" />
+    <header class="header">
+      <a class="header-logo logo" href="">
+        <img
+          class="header-img"
+          src="./images/header/logo.svg"
+          alt="BarberShop logo"
+          width="76"
+          height="76"
+        />
       </a>
-      <nav>
-        <ul>
-          <li>
-            <a href="#about">About</a>
+      <nav class="header-nav">
+        <ul class="header-list">
+          <li class="header-item">
+            <a class="header-link" href="#about">About</a>
           </li>
-          <li>
-            <a href="#price">Services and prices</a>
+          <li class="header-item">
+            <a class="header-link" href="#price">Services and prices</a>
           </li>
-          <li>
-            <a href="#team">Barbers</a>
+          <li class="header-item">
+            <a class="header-link" href="#team">Barbers</a>
           </li>
-          <li>
-            <a href="#contacts">Contacts</a>
+          <li class="header-item">
+            <a class="header-link" href="#contacts">Contacts</a>
           </li>
         </ul>
       </nav>
-      <a href="tel:+380441111111">+38 044 111 11 11</a>
-      <button type="button">Online-booking</button>
+      <a class="header-contact" href="tel:+380441111111">+38 044 111 11 11</a>
+      <button class="header-btn" type="button">Online-booking</button>
     </header>
     <main>
       <!-- Hero section -->
-      <section>
-        <ul>
-          <li>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <section class="hero">
+        <ul class="hero-list">
+          <li class="hero-item">
+            <a
+              class="hero-link"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
           </li>
-          <li>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">Youtube</a>
+          <li class="hero-item">
+            <a
+              class="hero-link"
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Youtube</a
+            >
           </li>
         </ul>
-        <p>A hair salon for men in Kyiv</p>
-        <h1>BarberShop</h1>
-        <p>We are experts in trendy men’s haircuts. We work quickly, carefully and with style.</p>
+        <p class="hero-uppertitle">A hair salon for men in Kyiv</p>
+        <h1 class="hero-title">BarberShop</h1>
+        <p class="hero-underitle"
+          >We are experts in trendy men’s haircuts. We work quickly, carefully and with style.</p
+        >
         <!-- Slider controls -->
-        <ul>
-          <li>
-            <button type="button">Back</button>
+        <ul class="hero-slider">
+          <li class="hero-slider-item">
+            <button class="hero-slider-btn" type="button">Back</button>
           </li>
-          <li>
-            <button type="button">Forward</button>
+          <li class="hero-slider-item">
+            <button class="hero-slider-btn" type="button">Forward</button>
           </li>
         </ul>
       </section>
       <!-- About section -->
-      <section id="about">
+      <section class="about section" id="about">
         <ul>
           <li>
             <img src="./images/about/img-1.jpg" alt="Beard trim" width="270" height="445" />
@@ -88,7 +111,7 @@
         <button type="button">Online-booking</button>
       </section>
       <!-- Price section -->
-      <section id="price">
+      <section class="price section" id="price">
         <p>Spend your time with the best masters</p>
         <h2>Services and prices</h2>
 
@@ -129,7 +152,7 @@
         <button type="button">Online-booking</button>
       </section>
       <!-- Benefits section -->
-      <section>
+      <section class="benefits section">
         <ul>
           <li>
             <p>600<sup>+</sup></p>
@@ -242,45 +265,5 @@
         </li>
       </ul>
     </footer>
-
-    <!-- <section>
-      <table>
-        <caption>USERS</caption>
-        <thead>
-          <tr>
-            <th>Full name</th>
-            <th>Email</th>
-            <th>User ID</th>
-            <th>Signed up</th>
-            <th>Status</th>
-            <th>Orders</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Hakeem Chan</td>
-            <td>lobortis.augue@natoquepenatibuset.ca</td>
-            <td>#9265</td>
-            <td>03.26.2022</td>
-            <td>Successful</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td> Orli J. Goodman</td>
-            <td>pede@at.com</td>
-            <td>#8545</td>
-            <td>08.02.2021</td>
-            <td>Successful</td>
-            <td>200</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="5">Summary</td>
-            <td>300</td>
-          </tr>
-        </tfoot>
-      </table>
-    </section> -->
   </body>
 </html>
