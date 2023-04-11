@@ -30,6 +30,11 @@ body {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: var(--main-txt-cl);
+
+  /*
+  Pattern image
+  background-image: url('data:image/svg+xml,%3Csvg width="52" height="26" viewBox="0 0 52 26" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z" /%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+  */
 }
 /* reset start */
 h1,
@@ -72,12 +77,15 @@ button {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-
+  /*
   outline: 2px solid red;
-  outline-offset: -2px;
+  outline-offset: -2px; */
 }
 
 .uppertitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   margin-bottom: 20px;
 
   font-weight: 600;
@@ -85,9 +93,20 @@ button {
   line-height: 1.36;
   text-transform: uppercase;
 }
+.uppertitle::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-txt-cl);
+}
 .uppertitle-light {
   color: var(--gray-cl-60);
 }
+.uppertitle-light::before {
+  background-color: var(--gray-cl-60);
+}
+
 .title {
   margin-bottom: 20px;
 
@@ -150,6 +169,7 @@ button {
   |============================
 */
 .header {
+  padding: 22px 0;
   background-color: var(--main-bg-cl);
 }
 .header-container {
@@ -294,16 +314,58 @@ button {
   |============================
 */
 .price {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--main-bg-cl);
+  background-image: url(../images/price/bg-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .price-list {
+  display: flex;
+  gap: 30px;
+
+  margin-bottom: 44px;
 }
 .price-item {
 }
 .price-inner-list {
+  width: 570px;
+  padding: 30px 20px;
+}
+.price-item:first-child .price-inner-list {
+  background-image: linear-gradient(#171a24, rgba(23, 26, 36, 0.2));
+}
+.price-item:last-child .price-inner-list {
+  background: linear-gradient(#090b13, rgba(9, 11, 19, 0.2));
 }
 .price-inner-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+
+  margin-bottom: 20px;
   color: var(--gray-cl);
+}
+.price-inner-item:last-child {
+  margin-bottom: 0;
+}
+.price-inner-item::before {
+  content: '';
+
+  flex-grow: 1;
+  height: 1px;
+  background: rgba(157, 164, 189, 0.2);
+}
+.price-inner-service {
+  order: -1;
+}
+.price-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 /**
   |============================
@@ -376,13 +438,35 @@ button {
 }
 /**
   |============================
-  | Contacts styles
+  | Booking styles
   |============================
 */
 .main-wrapper {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--main-bg-cl);
+  background-image: url(../images/contacts/bg-img.png);
+  background-repeat: no-repeat;
+  background-position: center left calc(50% + 408px);
+  background-size: contain;
 }
+.main-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
+.booking {
+  width: 570px;
+}
+/**
+  |============================
+  | Contacts styles
+  |============================
+*/
+
 .contacts {
+  width: 570px;
+  padding-left: 100px;
 }
 .contacts-address {
   margin-bottom: 72px;
