@@ -91,7 +91,7 @@
             We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
           </p>
           <!-- Slider controls -->
-          <ul class="slider-controls list">
+          <ul class="slider-controls list visually-hidden">
             <li class="slider-controls-item">
               <button class="slider-controls-btn prev" type="button" disabled>Back</button>
             </li>
@@ -412,7 +412,7 @@
       <section class="gallery section">
         <div class="container">
           <p class="gallery-uppertitle uppertitle">In Latin, "barba" means "beard"</p>
-          <h2 hidden>Gallery</h2>
+          <h2 class="visually-hidden">Gallery</h2>
           <ul class="gallery-list list card-set">
             <li class="gallery-item card-set-item">
               <img
@@ -470,15 +470,26 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/icons.svg#map-pin"></use>
+                    </svg>
                     st. Vasylkivska, 7A <br />
                     Kiev, 08132
                   </a>
                 </li>
                 <li class="contacts-item">
-                  <a class="contacts-link link" href="tel:+380441111111">+38 044 111 11 11</a>
+                  <a class="contacts-link link" href="tel:+380441111111">
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/icons.svg#phone"></use>
+                    </svg>
+                    +38 044 111 11 11
+                  </a>
                 </li>
                 <li class="contacts-item">
                   <a class="contacts-link link" href="mailto:barbershop@email.com">
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/icons.svg#email"></use>
+                    </svg>
                     barbershop@email.com
                   </a>
                 </li>
@@ -492,57 +503,6 @@
           </section>
         </div>
       </div>
-
-      <!-- Customers -->
-      <section class="section">
-        <div class="container">
-          <h2 class="title">Customers</h2>
-          <ul class="clients-list list">
-            <li class="clients-item">
-              <a href="" class="clients-link">
-                <svg class="clisent-icon" width="104" height="56">
-                  <use href=""></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="" class="clients-link">
-                <svg class="clisent-icon" width="104" height="56">
-                  <use href=""></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="" class="clients-link">
-                <svg class="clisent-icon" width="104" height="56">
-                  <use href=""></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="" class="clients-link">
-                <svg class="clisent-icon" width="104" height="56">
-                  <use href=""></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="" class="clients-link">
-                <svg class="clisent-icon" width="104" height="56">
-                  <use href=""></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="" class="clients-link">
-                <svg class="clisent-icon" width="104" height="56">
-                  <use href=""></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
     </main>
     <!-- Footer section -->
     <footer class="footer">
