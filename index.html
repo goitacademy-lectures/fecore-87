@@ -42,7 +42,7 @@
         <nav class="header-nav">
           <ul class="header-nav-list list">
             <li class="header-nav-item">
-              <a class="header-nav-link link" href="#about">About</a>
+              <a class="header-nav-link current link" href="#about">About</a>
             </li>
             <li class="header-nav-item">
               <a class="header-nav-link link" href="#price">Services and prices</a>
@@ -56,42 +56,51 @@
           </ul>
         </nav>
         <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="btn btn-light" type="button">Online-booking</button>
+        <button class="header-btn btn btn-light" type="button">Online-booking</button>
       </div>
     </header>
     <main>
       <!-- Hero section -->
-      <section class="hero section">
-        <div class="container">
-          <ul class="media list">
-            <li class="media-item">
-              <a
-                class="media-link link"
-                href="http://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>
-            </li>
-            <li class="media-item">
-              <a
-                class="media-link link"
-                href="http://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Youtube
-              </a>
-            </li>
-          </ul>
-          <p class="uppertitle uppertitle-light">A hair salon for men in Kyiv</p>
-          <h1 class="hero-title">BarberShop</h1>
-          <p class="hero-desc">
-            We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
-          </p>
+      <section class="hero">
+        <div class="hero-container container">
+          <div class="hero-left-side">
+            <ul class="media list">
+              <li class="media-item">
+                <a
+                  class="media-link link"
+                  href="http://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li class="media-item">
+                <a
+                  class="media-link link"
+                  href="http://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Youtube
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="hero-right-side">
+            <p class="uppertitle uppertitle-light">A hair salon for men in Kyiv</p>
+            <h1 class="hero-title">BarberShop</h1>
+            <p class="hero-desc">
+              We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
+            </p>
+          </div>
           <!-- Slider controls -->
-          <ul class="slider-controls list visually-hidden">
+          <ul class="slider-pagination">
+            <li class="slider-pagination-item active"></li>
+            <li class="slider-pagination-item"></li>
+            <li class="slider-pagination-item"></li>
+          </ul>
+          <ul class="slider-controls list">
             <li class="slider-controls-item">
               <button class="slider-controls-btn prev" type="button" disabled>Back</button>
             </li>
@@ -223,7 +232,18 @@
           <h2 class="title team-title">Our barbers</h2>
           <ul class="team-list list card-set">
             <li class="team-item card-set-item">
-              <img class="team-img" src="./images/team/img-1.jpg" alt="" width="370" height="346" />
+              <div class="team-box">
+                <img
+                  class="team-img"
+                  src="./images/team/img-1.jpg"
+                  alt=""
+                  width="370"
+                  height="346"
+                />
+                <p class="team-label">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, velit.
+                </p>
+              </div>
               <div class="team-wrapper">
                 <h3 class="team-subtitle">John Smith</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -284,7 +304,18 @@
               </div>
             </li>
             <li class="team-item card-set-item">
-              <img class="team-img" src="./images/team/img-2.jpg" alt="" width="370" height="346" />
+              <div class="team-box">
+                <img
+                  class="team-img"
+                  src="./images/team/img-2.jpg"
+                  alt=""
+                  width="370"
+                  height="346"
+                />
+                <p class="team-label">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, velit.
+                </p>
+              </div>
               <div class="team-wrapper">
                 <h3 class="team-subtitle">Michele Doe</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -345,7 +376,18 @@
               </div>
             </li>
             <li class="team-item card-set-item">
-              <img class="team-img" src="./images/team/img-3.jpg" alt="" width="370" height="346" />
+              <div class="team-box">
+                <img
+                  class="team-img"
+                  src="./images/team/img-3.jpg"
+                  alt=""
+                  width="370"
+                  height="346"
+                />
+                <p class="team-label">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, velit.
+                </p>
+              </div>
               <div class="team-wrapper">
                 <h3 class="team-subtitle">Alan Black</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -532,5 +574,16 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-btn" type="button">
+          <svg class="modal-icon" width="20" height="20">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </body>
 </html>
