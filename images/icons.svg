@@ -31,5 +31,9 @@
       <path fill="none" stroke="#9da4bd" style="stroke:var(--color1, #9da4bd)" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.333" d="M6.4 6.667h19.2c1.32 0 2.4 1.05 2.4 2.333v14c0 1.283-1.08 2.333-2.4 2.333H6.4C5.08 25.333 4 24.283 4 23V9c0-1.283 1.08-2.333 2.4-2.333z"/>
       <path fill="none" stroke="#9da4bd" style="stroke:var(--color1, #9da4bd)" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.333" d="m26.667 9.333-10.667 8-10.667-8"/>
     </symbol>
+    <!-- Modal icons -->
+    <symbol id="icon-close" viewBox="0 0 384 512">
+      <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+    </symbol>
   </defs>
 </svg>
