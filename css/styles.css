@@ -20,6 +20,9 @@
 
   --header-idx: 10;
   --modal-idx: 100;
+
+  --anim-fast: 400ms ease-in;
+  --anim-slow: 1000ms ease-in-out;
 }
 
 /**
@@ -138,6 +141,7 @@ svg {
 
   color: var(--light-gray-cl);
 }
+/* Normal state */
 .btn {
   min-width: 160px;
   min-height: 40px;
@@ -154,7 +158,15 @@ svg {
   background-color: transparent;
   border: 1px solid #ff6c00;
   border-radius: 25px;
+
+  /* transition-property: color, background-color;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in; */
+  /* transition-delay: 2s; */
+
+  transition: color var(--anim-fast), background-color var(--anim-fast);
 }
+/* Active state */
 .btn:hover,
 .btn:focus {
   color: var(--secondary-txt-cl);
@@ -221,6 +233,8 @@ svg {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: var(--secondary-txt-cl);
+
+  transition: color var(--anim-fast);
 }
 .header-nav-link:hover,
 .header-nav-link:focus {
@@ -236,6 +250,8 @@ svg {
   width: 100%;
   height: 4px;
   border-radius: 4px;
+
+  transition: background-color var(--anim-fast);
 }
 .header-nav-link.current {
   color: var(--accent-txt-cl);
@@ -256,6 +272,8 @@ svg {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: var(--secondary-txt-cl);
+
+  transition: color var(--anim-fast);
 }
 .header-contact:hover,
 .header-contact:focus {
@@ -281,6 +299,10 @@ svg {
   display: flex;
   align-items: flex-end;
 }
+.hero-media {
+  transform: rotate(-90deg) translateX(40px) translateY(35px);
+  transform-origin: center left;
+}
 .media {
   display: flex;
   align-items: center;
@@ -301,6 +323,8 @@ svg {
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+
+  transition: color var(--anim-fast);
 }
 .media-link:hover,
 .media-link:focus {
@@ -318,7 +342,9 @@ svg {
   background-size: cover;
 }
 .hero-title {
+  width: fit-content;
   margin-bottom: 20px;
+
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
@@ -400,8 +426,13 @@ svg {
   gap: 30px;
 }
 .about-item {
+  overflow: hidden;
 }
 .about-img {
+  transition: transform 1500ms linear;
+}
+.about-item:hover .about-img {
+  transform: scale(1.25);
 }
 .about-right-side {
   width: 470px;
@@ -557,22 +588,64 @@ svg {
 }
 .team-box {
   position: relative;
+  overflow: hidden;
 }
 .team-img {
 }
-.team-label {
+/* overlay slide */
+/* .overlay {
   position: absolute;
-  bottom: 20px;
-  left: 5%;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
 
-  width: 90%;
+  width: 100%;
+  height: 100%;
   padding: 15px;
 
-  color: #f7f7f7;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
   border-radius: 10px;
   background-color: rgba(17, 19, 25, 0.2);
   backdrop-filter: blur(3px);
+
+  transition: transform var(--anim-slow);
+}
+.team-item:hover .overlay {
+  transform: translateY(0);
+} */
+/* overlay scale */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.3);
+  opacity: 0;
+
+  width: 80%;
+  height: 80%;
+  padding: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  border-radius: 10px;
+  background-color: rgba(17, 19, 25, 0.2);
+  backdrop-filter: blur(3px);
+
+  transition: transform 600ms cubic-bezier(0.18, 0.89, 0.32, 1.28),
+    opacity 600ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.team-item:hover .overlay {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.overlay-label {
+  color: #f7f7f7;
+  text-align: center;
 }
 .team-wrapper {
   padding: 30px 15px;
@@ -607,6 +680,8 @@ svg {
 
   background-color: #fff;
   border-radius: 50%;
+
+  transition: color var(--anim-fast), background-color var(--anim-fast);
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -721,24 +796,37 @@ svg {
   |============================
 */
 .backdrop {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   z-index: var(--modal-idx);
-  /* right: 0;
-  bottom: 0; */
 
   width: 100%;
   height: 100%;
 
   background-color: rgba(17, 19, 25, 0.2);
   backdrop-filter: blur(4px);
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+
+  transition: opacity 200ms ease, visibility 200ms ease, backdrop-filter 200ms ease;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  backdrop-filter: blur(0);
+
+  transition-delay: 400ms;
 }
 .modal {
   position: absolute;
-  top: calc(50% - 275px);
-  left: calc(50% - 225px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0) scale(1);
+  opacity: 1;
 
   width: 450px;
   min-height: 550px;
@@ -747,6 +835,13 @@ svg {
   background-color: var(--secondary-bg-cl);
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+  transition: transform 400ms ease-in 200ms, opacity 400ms ease-in 200ms;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) rotate(360deg) scale(0.2);
+  opacity: 0;
 }
 .modal-btn {
   position: absolute;
