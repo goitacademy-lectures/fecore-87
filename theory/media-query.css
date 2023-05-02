@@ -1,0 +1,86 @@
+body {
+  font-family: sans-serif;
+  background-color: teal;
+}
+
+/* @media screen and (min-width: 700px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    background-color: blueviolet;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background-color: lightgreen;
+  }
+} */
+
+/* @media screen and (max-width: 700px), (min-width: 800px) {
+  body {
+    background-color: lightgreen;
+  }
+} */
+
+/* @media screen and (max-width: 400px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+  body {
+    font-size: 30px;
+    color: red;
+  }
+} */
+
+/* @media screen and (width: 600px) {
+  body {
+    background-color: tomato;
+  }
+} */
+
+/**
+  |============================
+  | Media types
+  |============================
+*/
+/*
+all - всі пристрої (без виключення)
+print - пристрої, які виводять сторінку на друк
+screen - пристрої з фізичним кольоровим екраном
+*/
+
+.text {
+  color: white;
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    background-color: blueviolet;
+  }
+
+  .text {
+    font-size: 20px;
+    color: tomato;
+  }
+}
+
+/* @media screen and (orientation: landscape) {
+  .text {
+    text-align: center;
+    color: hotpink;
+  }
+} */
+/* @media print {
+  .text {
+    color: black;
+    font-size: 28px;
+  }
+} */

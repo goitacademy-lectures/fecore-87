@@ -58,11 +58,20 @@
           <button class="header-btn btn btn-light" type="button" data-modal-open
             >Online-booking</button
           >
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="menu-toggle-icon" width="32" height="22">
+              <use href="./images/icons.svg#menu-btn"></use>
+            </svg>
+          </button>
         </div>
       </header>
       <main>
         <!-- Hero section -->
-        <section class="hero">
+        <!-- <section class="hero">
           <div class="hero-container container">
             <div class="hero-left-side">
               <ul class="hero-media media list">
@@ -97,7 +106,6 @@
                 We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
               </p>
             </div>
-            <!-- Slider controls -->
             <ul class="slider-pagination">
               <li class="slider-pagination-item active"></li>
               <li class="slider-pagination-item"></li>
@@ -112,9 +120,9 @@
               </li>
             </ul>
           </div>
-        </section>
+        </section> -->
         <!-- About section -->
-        <section class="about section" id="about">
+        <!-- <section class="about section" id="about">
           <div class="about-container container">
             <ul class="about-list list">
               <li class="about-item">
@@ -151,9 +159,9 @@
               <button class="btn" type="button">Online-booking</button>
             </div>
           </div>
-        </section>
+        </section> -->
         <!-- Price section -->
-        <section class="price section" id="price">
+        <!-- <section class="price section" id="price">
           <div class="container">
             <p class="uppertitle uppertitle-light">Spend your time with the best masters</p>
             <h2 class="title title-light">Services and prices</h2>
@@ -194,9 +202,9 @@
             </ul>
             <button class="price-btn btn btn-light" type="button">Online-booking</button>
           </div>
-        </section>
+        </section> -->
         <!-- Benefits section -->
-        <section class="benefits section">
+        <!-- <section class="benefits section">
           <div class="benefits-container container">
             <div class="benefits-left-side">
               <ul class="benefits-list list">
@@ -247,9 +255,9 @@
               </p>
             </div>
           </div>
-        </section>
+        </section> -->
         <!-- Team section -->
-        <section class="team section" id="team">
+        <!-- <section class="team section" id="team">
           <div class="container">
             <p class="uppertitle">For true enjoyers of the atmosphere</p>
             <h2 class="title team-title">Our barbers</h2>
@@ -478,9 +486,9 @@
               </li>
             </ul>
           </div>
-        </section>
+        </section> -->
         <!-- Gallery section -->
-        <section class="gallery section">
+        <!-- <section class="gallery section">
           <div class="container">
             <p class="gallery-uppertitle uppertitle">In Latin, "barba" means "beard"</p>
             <h2 class="visually-hidden">Gallery</h2>
@@ -523,9 +531,9 @@
               </li>
             </ul>
           </div>
-        </section>
+        </section> -->
         <!-- Contacts section -->
-        <div class="main-wrapper">
+        <!-- <div class="main-wrapper">
           <div class="container">
             <section class="booking section">
               <h2 class="title title-light">Online-booking</h2>
@@ -551,7 +559,12 @@
                   </label>
                 </div>
                 <label class="booking-form-field">
-                  <textarea class="booking-form-message" name="user_message" rows="6"></textarea>
+                  <textarea
+                    class="booking-form-message"
+                    name="user_message"
+                    rows="6"
+                    placeholder=" "
+                  ></textarea>
                   <span class="booking-form-label">Message</span>
                 </label>
                 <button class="btn btn-light" type="submit">Send</button>
@@ -600,7 +613,7 @@
               </p>
             </section>
           </div>
-        </div>
+        </div> -->
       </main>
       <!-- Footer section -->
       <footer class="footer">
@@ -633,7 +646,7 @@
     </div>
 
     <!-- Modal window -->
-    <div class="backdrop" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="modal-icon" width="20" height="20">
@@ -696,16 +709,6 @@
 
           <label class="modal-form-agreement">
             <input class="modal-form-agreement-box" type="checkbox" name="user_agreement" />
-            <!-- <svg class="modal-form-agreement-icon" width="18" height="18">
-              <use
-                class="modal-form-agreement-unchecked"
-                href="./images/icons.svg#icon-unchecked"
-              ></use>
-              <use
-                class="modal-form-agreement-checked"
-                href="./images/icons.svg#icon-checked"
-              ></use>
-            </svg> -->
             <span class="modal-form-agreement-text">
               I accept the terms and conditions of the
               <a class="modal-form-agreement-link" href="">Privacy Policy</a>
@@ -715,11 +718,113 @@
           <button class="modal-btn btn" type="submit">Send</button>
         </form>
       </div>
+    </div> -->
+
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li>
+          <a href="" class="link">About</a>
+        </li>
+        <li>
+          <a href="" class="link">Products</a>
+        </li>
+        <li>
+          <a href="" class="link">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-contacts list">
+        <li>
+          <a class="link" href="tel:">+11 (000) 111-11-11</a>
+        </li>
+        <li>
+          <a class="link" href="mailto:">info@devstudio.com</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-socials list">
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram icon"
+          >
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter icon"
+          >
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook icon"
+          >
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Linkedin icon"
+          >
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/icons.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/animation.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/header.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
