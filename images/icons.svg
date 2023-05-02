@@ -53,5 +53,9 @@
     <symbol id="icon-unchecked" viewBox="0 0 32 32">
       <path fill="transparent" stroke="rgba(46, 47, 66, 0.4)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M4 1h24c1.657 0 3 1.343 3 3v24c0 1.657-1.343 3-3 3h-24c-1.657 0-3-1.343-3-3v-24c0-1.657 1.343-3 3-3z"></path>
     </symbol>
+    <!-- Mobile menu icons -->
+    <symbol id="menu-btn" viewBox="0 0 47 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4.3636" d="M1.96 29.154h42.965M1.96 15.615h42.965M1.96 2.077h42.965"></path>
+    </symbol>
   </defs>
 </svg>
