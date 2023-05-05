@@ -71,7 +71,7 @@
       </header>
       <main>
         <!-- Hero section -->
-        <!-- <section class="hero">
+        <section class="hero">
           <div class="hero-container container">
             <div class="hero-left-side">
               <ul class="hero-media media list">
@@ -106,7 +106,7 @@
                 We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
               </p>
             </div>
-            <ul class="slider-pagination">
+            <ul class="slider-pagination list">
               <li class="slider-pagination-item active"></li>
               <li class="slider-pagination-item"></li>
               <li class="slider-pagination-item"></li>
@@ -120,9 +120,9 @@
               </li>
             </ul>
           </div>
-        </section> -->
+        </section>
         <!-- About section -->
-        <!-- <section class="about section" id="about">
+        <section class="about section" id="about">
           <div class="about-container container">
             <ul class="about-list list">
               <li class="about-item">
@@ -146,10 +146,10 @@
             </ul>
             <div class="about-right-side">
               <p class="uppertitle">About</p>
-              <h2 class="title">Best Barbershop in your city</h2>
-              <p class="undertitle"
-                >If you want to add more confidence to your image, you should visit us.</p
-              >
+              <h2 class="about-title title">Best Barbershop in your city</h2>
+              <p class="about-undertitle undertitle">
+                If you want to add more confidence to your image, you should visit us.
+              </p>
               <p class="about-desc">
                 We are a team that never stops at what has been achieved and are thirsty for
                 changes. And when you fall into the hands of our master, you will never be the same
@@ -159,7 +159,7 @@
               <button class="btn" type="button">Online-booking</button>
             </div>
           </div>
-        </section> -->
+        </section>
         <!-- Price section -->
         <!-- <section class="price section" id="price">
           <div class="container">
@@ -257,19 +257,34 @@
           </div>
         </section> -->
         <!-- Team section -->
-        <!-- <section class="team section" id="team">
-          <div class="container">
+        <section class="team section" id="team">
+          <div class="team-container container">
             <p class="uppertitle">For true enjoyers of the atmosphere</p>
             <h2 class="title team-title">Our barbers</h2>
             <ul class="team-list list card-set">
               <li class="team-item card-set-item">
                 <div class="team-box">
+                  <!--
+                    screen = 480 || DPR = 2
+
+                    frame = 418px * 2 = 836px
+                   -->
                   <img
                     class="team-img"
+                    srcset="
+                      ./images/team/img-1_370.jpg 370w,
+                      ./images/team/img-1_418.jpg 418w,
+                      ./images/team/img-1_450.jpg 450w,
+                      ./images/team/img-1_740.jpg 740w,
+                      ./images/team/img-1_836.jpg 836w,
+                      ./images/team/img-1_900.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px,( min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
                     src="./images/team/img-1.jpg"
                     alt=""
-                    width="370"
+                    width="450"
                     height="346"
+                    loading="lazy"
                   />
                   <div class="overlay">
                     <p class="overlay-label">
@@ -340,10 +355,20 @@
                 <div class="team-box">
                   <img
                     class="team-img"
-                    src="./images/team/img-2.jpg"
+                    srcset="
+                      ./images/team/img-2_370.jpg 370w,
+                      ./images/team/img-2_418.jpg 418w,
+                      ./images/team/img-2_450.jpg 450w,
+                      ./images/team/img-2_740.jpg 740w,
+                      ./images/team/img-2_836.jpg 836w,
+                      ./images/team/img-2_900.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px,( min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                    src="./images/team/img-1.jpg"
                     alt=""
-                    width="370"
+                    width="450"
                     height="346"
+                    loading="lazy"
                   />
                   <div class="overlay">
                     <p class="overlay-label">
@@ -414,10 +439,20 @@
                 <div class="team-box">
                   <img
                     class="team-img"
-                    src="./images/team/img-3.jpg"
+                    srcset="
+                      ./images/team/img-3_370.jpg 370w,
+                      ./images/team/img-3_418.jpg 418w,
+                      ./images/team/img-3_450.jpg 450w,
+                      ./images/team/img-3_740.jpg 740w,
+                      ./images/team/img-3_836.jpg 836w,
+                      ./images/team/img-3_900.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px,( min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                    src="./images/team/img-1.jpg"
                     alt=""
-                    width="370"
+                    width="450"
                     height="346"
+                    loading="lazy"
                   />
                   <div class="overlay">
                     <p class="overlay-label">
@@ -486,52 +521,196 @@
               </li>
             </ul>
           </div>
-        </section> -->
+        </section>
         <!-- Gallery section -->
-        <!-- <section class="gallery section">
+        <section class="gallery section">
           <div class="container">
             <p class="gallery-uppertitle uppertitle">In Latin, "barba" means "beard"</p>
             <h2 class="visually-hidden">Gallery</h2>
             <ul class="gallery-list list card-set">
               <li class="gallery-item card-set-item" data-aos="zoom-in-right" data-aos-delay="300">
-                <img
-                  class="gallery-img"
-                  src="./images/gallery/img-1.jpg"
-                  alt=""
-                  width="270"
-                  height="360"
-                />
+                <picture>
+                  <!-- Desktop screen -->
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/gallery/img-1_desk@1x.webp 1x,
+                      ./images/gallery/img-1_desk@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/gallery/img-1_desk@1x.jpg 1x,
+                      ./images/gallery/img-1_desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Tablet screen -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/gallery/img-1_tab@1x.webp 1x,
+                      ./images/gallery/img-1_tab@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/gallery/img-1_tab@1x.jpg 1x,
+                      ./images/gallery/img-1_tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Phone screen -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/gallery/img-1_mob@1x.webp 1x,
+                      ./images/gallery/img-1_mob@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/gallery/img-1_mob@1x.jpg 1x,
+                      ./images/gallery/img-1_mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="gallery-img"
+                    src="./images/gallery/img-1_mob@1x.jpg"
+                    alt=""
+                    width="418"
+                    height="360"
+                    loading="lazy"
+                  />
+                </picture>
               </li>
               <li class="gallery-item card-set-item" data-aos="zoom-in-right" data-aos-delay="600">
-                <img
-                  class="gallery-img"
-                  src="./images/gallery/img-2.jpg"
-                  alt=""
-                  width="270"
-                  height="360"
-                />
+                <picture>
+                  <!-- Desktop screen -->
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/gallery/img-2_desk@1x.jpg 1x,
+                      ./images/gallery/img-2_desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Tablet screen -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/gallery/img-2_tab@1x.jpg 1x,
+                      ./images/gallery/img-2_tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Phone screen -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/gallery/img-2_mob@1x.jpg 1x,
+                      ./images/gallery/img-2_mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="gallery-img"
+                    src="./images/gallery/img-2_mob@1x.jpg"
+                    alt=""
+                    width="418"
+                    height="360"
+                    loading="lazy"
+                  />
+                </picture>
               </li>
               <li class="gallery-item card-set-item" data-aos="zoom-in-right" data-aos-delay="900">
-                <img
-                  class="gallery-img"
-                  src="./images/gallery/img-3.jpg"
-                  alt=""
-                  width="270"
-                  height="360"
-                />
+                <picture>
+                  <!-- Desktop screen -->
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/gallery/img-3_desk@1x.jpg 1x,
+                      ./images/gallery/img-3_desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Tablet screen -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/gallery/img-3_tab@1x.jpg 1x,
+                      ./images/gallery/img-3_tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Phone screen -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/gallery/img-3_mob@1x.jpg 1x,
+                      ./images/gallery/img-3_mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="gallery-img"
+                    src="./images/gallery/img-3_mob@1x.jpg"
+                    alt=""
+                    width="418"
+                    height="360"
+                    loading="lazy"
+                  />
+                </picture>
               </li>
               <li class="gallery-item card-set-item" data-aos="zoom-in-right" data-aos-delay="1200">
-                <img
-                  class="gallery-img"
-                  src="./images/gallery/img-4.jpg"
-                  alt=""
-                  width="270"
-                  height="360"
-                />
+                <picture>
+                  <!-- Desktop screen -->
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/gallery/img-4_desk@1x.jpg 1x,
+                      ./images/gallery/img-4_desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Tablet screen -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/gallery/img-4_tab@1x.jpg 1x,
+                      ./images/gallery/img-4_tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Phone screen -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/gallery/img-4_mob@1x.jpg 1x,
+                      ./images/gallery/img-4_mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="gallery-img"
+                    src="./images/gallery/img-4_mob@1x.jpg"
+                    alt=""
+                    width="418"
+                    height="360"
+                    loading="lazy"
+                  />
+                </picture>
               </li>
             </ul>
           </div>
-        </section> -->
+        </section>
         <!-- Contacts section -->
         <!-- <div class="main-wrapper">
           <div class="container">
@@ -618,8 +797,7 @@
       <!-- Footer section -->
       <footer class="footer">
         <div class="footer-container container">
-          <p class="footer-copyright">&#169; Copyright 2020</p>
-          <ul class="media list">
+          <ul class="footer-media media list">
             <li class="media-item">
               <a
                 class="media-link footer-link link"
@@ -641,6 +819,7 @@
               </a>
             </li>
           </ul>
+          <p class="footer-copyright">&#169; Copyright 2020</p>
         </div>
       </footer>
     </div>
